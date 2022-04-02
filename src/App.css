@@ -1,0 +1,121 @@
+.App {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#theme {
+	position: absolute;
+	bottom: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.content {
+	min-height: 578px;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	/* left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%); */
+	/* z-index: -1; */
+	background: var(--50);
+}
+
+header {
+	padding: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+header svg {
+	width: 80%;
+}
+
+header svg path {
+	fill: var(--300);
+}
+
+.products {
+	background: var(--100);
+	flex: 1;
+}
+
+.modal-btn {
+	height: 48px;
+	width: 48px;
+	border-radius: 50%;
+	background: var(--200);
+	color: var(--50);
+	border: 0;
+	position: absolute;
+	bottom: 64px;
+	right: 32px;
+	font-size: 20px;
+	z-index: 1;
+}
+
+.save-btn {
+	height: 48px;
+	width: 48px;
+	border-radius: 50%;
+	background: var(--200);
+	color: var(--50);
+	border: 0;
+	position: absolute;
+	bottom: 64px;
+	left: 32px;
+	font-size: 20px;
+	z-index: 1;
+}
+
+.modal-overlay {
+	background: var(--300a);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal {
+	opacity: 1;
+	background: #fafbff;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	max-width: 90%;
+	border-radius: 6px;
+	gap: 8px;
+}
+
+.modal .buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.modal button {
+	flex: 1;
+	height: 32px;
+	border: 0;
+}
+
+.modal button:first-child {
+	background: transparent;
+	color: red;
+}
+
+.modal button:last-child {
+	background: rgb(77, 197, 77);
+	color: black;
+	border-radius: 4px;
+}
