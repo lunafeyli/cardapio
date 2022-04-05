@@ -24,6 +24,7 @@ function App() {
 	const [description, setDescription] = useState("");
 	const [price, setPrice] = useState(0);
 	const [products, setProducts] = useLocalStorage<Product[]>("product", []);
+	const [title, setTitle] = useState("");
 	const imgInputRef = useRef<HTMLInputElement>(null);
 
 	function newProductHanlder() {
@@ -252,6 +253,12 @@ function App() {
 				>
 					+
 				</button>
+				<input
+					type="text"
+					id="title-input"
+					value={title}
+					onChange={(e) => setTitle(e.target.value)}
+				/>
 				<button className="save-btn" onClick={() => handleDownload()}>
 					Bx
 				</button>
@@ -269,9 +276,13 @@ function App() {
 				<div className="content" id="content">
 					<header>
 						<Logo />
+						<h1 className="title">{title}</h1>
 					</header>
 					<Waves colors={["D71219", "6c090d"]} />
-					<div className="products">
+					<div
+						className="products"
+						style={{ paddingTop: title !== "" ? 24 : 0 }}
+					>
 						{products.map((product, index) => (
 							<Product
 								product={product}

@@ -30,6 +30,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 }
 
 header svg {
@@ -118,4 +119,20 @@ header svg path {
 	background: rgb(77, 197, 77);
 	color: black;
 	border-radius: 4px;
+}
+
+#title-input {
+	position: absolute;
+	bottom: 76px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 45%;
+}
+
+.title {
+	position: absolute;
+	bottom: -76px;
+	font-weight: 500;
+	font-size: 22px;
+	color: var(--50);
 }
