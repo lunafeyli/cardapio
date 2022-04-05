@@ -4,6 +4,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: relative;
 }
 
 .product .info {
@@ -58,4 +59,30 @@
 	position: absolute;
 	right: -5px;
 	top: 0;
+}
+
+.actions {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 24px;
+}
+
+.actions__action {
+	border: 0;
+	background: transparent;
+	flex: 1;
+}
+
+.delete {
+	border: 0;
+	background: transparent;
+	position: absolute;
+	top: 4px;
+	left: 4px;
 }
